@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from '../web_modules/lit-element.js';
 
 class ListItem extends LitElement {
 
@@ -17,8 +17,19 @@ class ListItem extends LitElement {
 
   render() {
     return html`
+     <style>
+      .list {
+        margin: 10px;
+        padding: 10px;
+        border: solid 1px black;
+        border-radius: 10px;
+        min-height: 50px;
+      }
+    </style>
+    <div className="list">
       <h2>${this.name}</h2>
       <p>${this.description}</p>
+    </div>
     `;
   }
 }
